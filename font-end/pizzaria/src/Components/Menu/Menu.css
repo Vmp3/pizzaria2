@@ -1,0 +1,94 @@
+/* Menu.css */
+
+.header-container {
+  top: 0;
+  width: 100%;
+  background-color: #121618;
+  z-index: 1000;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: auto;
+  max-width: 120%;
+  width: 4rem;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.header-title h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.header-title .highlight {
+  font-size: 1.5rem;
+  color: orange;
+  margin: 0;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.header-links a,
+.header-links .nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.header-links a.active,
+.header-links .nav-link.active {
+  color: yellow;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-action-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 0.2rem;
+}
+
+.header-action-button:focus {
+  outline: none;
+}
+
+
+@media (max-width: 1080px) {
+  .header-links {
+    margin-left: 80.5rem;
+  }
+}

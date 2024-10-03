@@ -1,0 +1,38 @@
+.pedido-concluido-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    height: 90vh;
+    justify-content: center;
+    background-image: url('../../../../public/landing-bg.270db7f8775652679ffe.webp');
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .pedido-concluido-status {
+    margin-top: 20px;
+  }
+  
+  .pedido-concluido-icon {
+    font-size: 4rem;
+    color: green;
+    border: 2px solid green;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .pedido-caminho {
+    color: green;
+  }
+  
+  .text-pedido-sucess {
+    color: gray;
+  }
+  

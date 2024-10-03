@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nothing+You+Could+Do&family=Pacifico&family=Poetsen+One&family=Signika+Negative:wght@300..700&display=swap");
+
+:root {
+  --font-poetsen-one: "Poetsen One", sans-serif;
+  --font-nothing-you-could-do: "Nothing You Could Do", cursive;
+  --font-signika-negative: "Signika Negative", sans-serif;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(20%);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 1;
+  z-index: 1;
+}
+
+.text-overlay h2 {
+  color: white;
+  font-family: var(--font-poetsen-one);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.welcome {
+  color: orange;
+  font-family: var(--font-nothing-you-could-do);
+  font-size: 3rem;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.text-overlay p:not(.welcome) {
+  color: white;
+  font-family: var(--font-signika-negative);
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.montar-pizza-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: var(--font-signika-negative);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.montar-pizza-button:hover {
+  background-color: darkorange;
+}

@@ -1,0 +1,24 @@
+.criar-conta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  
+}
+
+.criar-conta-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+.criar-conta-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-button {
+    margin-top: 10px;
+}

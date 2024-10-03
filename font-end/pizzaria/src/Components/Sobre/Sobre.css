@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nothing+You+Could+Do&family=Pacifico&family=Poetsen+One&family=Signika+Negative:wght@300..700&display=swap");
+
+:root {
+  --font-poetsen-one: "Poetsen One", sans-serif;
+  --font-nothing-you-could-do: "Nothing You Could Do", cursive;
+  --font-signika-negative: "Signika Negative", sans-serif;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  height: 60%;
+  overflow: hidden;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../public/cimento.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
+}
+
+.text-container {
+  flex: 1;
+}
+
+.text-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  font-family: var(--font-nothing-you-could-do);
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: orange;
+  text-align: center;
+  z-index: 1;
+  font-family: var(--font-nothing-you-could-do);
+}
