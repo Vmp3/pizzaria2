@@ -18,4 +18,4 @@ COPY --from=build /app/target/*.jar pizzaria.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/vemnox1.jar"]
+ENTRYPOINT ["java","-jar","/app/pizzaria.jar"]
