@@ -3,8 +3,8 @@ FROM maven:3.8.4-openjdk-17 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
-COPY pizzaria2/backend/pizzaria/src ./src
+COPY backend/pizzaria/src ./src
+COPY backend/pizzaria/pom.xml .
 
 # Build do Maven SEM testes unitarios
 RUN mvn clean package -DskipTests
