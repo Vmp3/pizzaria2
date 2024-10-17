@@ -6,7 +6,6 @@ WORKDIR /app
 COPY backend/pizzaria/src ./src
 COPY backend/pizzaria/pom.xml .
 
-# Build do Maven SEM testes unitarios
 RUN mvn clean package -DskipTests
 
 # Package stage
