@@ -17,7 +17,7 @@ function MontarPizza() {
   useEffect(() => {
     const fetchSaboresDisponiveis = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/sabores/listar');
+        const response = await axios.get(apiURL + '/sabores/listar');
         setSaboresDisponiveis(response.data);
       } catch (error) {
         setErro('Erro ao buscar sabores de pizzas: ' + error.message);

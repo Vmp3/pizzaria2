@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./Principal.css";
 import CustomButton from "../../Util/CustomButton";
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 const VideoBackground = () => {
   const videoRef = useRef(null);
 

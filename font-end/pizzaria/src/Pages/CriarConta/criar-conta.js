@@ -6,7 +6,7 @@ import { formatCPF } from "../../Util/Utils";
 import { handleCepChange } from "../../Util/CepUtil";
 import CustomInput from "../../Util/CustomInput";
 import CustomButton from "../../Util/CustomButton";
-
+const apiURL = process.env.REACT_APP_API_URL;
 function CriarConta() {
     const [cpf, setCpf] = useState("");
     const [nome, setNome] = useState("");
@@ -35,7 +35,7 @@ function CriarConta() {
         }
  
         try {
-            const response = await axios.post("http://localhost:8080/criar-conta", {
+            const response = await axios.post(apiURL + "/criar-conta", {
                 cpf,
                 nome: trimmedNome,
                 cep,
@@ -46,7 +46,7 @@ function CriarConta() {
             });
             console.log(response.data);
             alert("Conta criada com sucesso!");
-            navigate("/login"); // Redireciona para a página de login após sucesso
+            navigate("/login"); 
         } catch (error) {
             console.error("Erro ao criar conta:", error);
             if (error.response && error.response.data) {

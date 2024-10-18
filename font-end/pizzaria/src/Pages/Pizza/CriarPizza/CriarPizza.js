@@ -28,8 +28,8 @@ function PizzaForm() {
     event.preventDefault();
     try {
       const response = isEditing
-        ? await axios.put(`http://localhost:8080/sabores/atualizar/${pizzaId}`, pizza)
-        : await axios.post("http://localhost:8080/sabores/adicionar", pizza);
+        ? await axios.put(apiURL + `/sabores/atualizar/${pizzaId}`, pizza)
+        : await axios.post(apiURL + "/sabores/adicionar", pizza);
 
       setMensagem(isEditing ? "Sabor de pizza atualizado com sucesso!" : "Sabor de pizza adicionado com sucesso!");
       setPizza({
@@ -53,7 +53,7 @@ function PizzaForm() {
 
   const handleFetchPizza = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/sabores/${pizzaId}`);
+      const response = await axios.get(apiURL + `/sabores/${pizzaId}`);
       const pizzaData = response.data;
       setPizza({
         imagem: pizzaData.imagem,

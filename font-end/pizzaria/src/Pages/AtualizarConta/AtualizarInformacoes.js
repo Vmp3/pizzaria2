@@ -7,6 +7,8 @@ import CustomInput from "../../Util/CustomInput";
 import CustomButton from "../../Util/CustomButton";
 import { handleCepChange } from "../../Util/CepUtil";
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 function EditarDadosUsuario() {
     const { id } = useParams();
     const [usuario, setUsuario] = useState(null);
@@ -20,7 +22,7 @@ function EditarDadosUsuario() {
     useEffect(() => {
         const fetchUsuario = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/usuarios/${userId}`);
+                const response = await axios.get(apiURL + `/usuarios/${userId}`);
                 setUsuario(response.data);
                 setCep(response.data.cep);
                 setEndereco(response.data.endereco);
@@ -47,7 +49,7 @@ function EditarDadosUsuario() {
         }
 
         try {
-            const response = await axios.put(`http://localhost:8080/usuarios/${userId}/editar`, {
+            const response = await axios.put(apiURL + `/usuarios/${userId}/editar`, {
                 ...usuario,
                 cep,
                 endereco: trimmedEndereco,

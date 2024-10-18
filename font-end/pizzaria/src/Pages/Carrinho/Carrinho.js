@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Carrinho.css';
 import CustomButton from "../../Util/CustomButton";
-
+const apiURL = process.env.REACT_APP_API_URL;
 const Carrinho = () => {
   const [carrinho, setCarrinho] = useState([]);
   const [erro, setErro] = useState(null);
@@ -64,7 +64,7 @@ const Carrinho = () => {
         itensPedido: itensPedido
       };
 
-      const response = await axios.post('http://localhost:8080/carrinho/adicionar', pedido);
+      const response = await axios.post(apiURL + '/carrinho/adicionar', pedido);
 
       if (response.status === 200) {
         const transactionId = response.data.transactionId;

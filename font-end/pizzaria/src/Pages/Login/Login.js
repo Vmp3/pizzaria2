@@ -20,7 +20,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/login", {
+      const response = await axios.post(apiURL + "/login", {
         cpf,
         senha,
       });

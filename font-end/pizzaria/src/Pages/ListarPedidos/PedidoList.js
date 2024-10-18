@@ -23,7 +23,7 @@ const PedidoList = () => {
 
     const fetchPedidos = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/carrinho/listar');
+            const response = await axios.get(apiURL + '/carrinho/listar');
             setPedidos(response.data);
         } catch (error) {
             console.error("Erro ao buscar pedidos: ", error);
